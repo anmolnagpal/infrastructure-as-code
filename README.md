@@ -1,4 +1,4 @@
-# infrastructure-as-code-training (IAC)
+# infrastructure-as-code (IAC)
 
 ##Ansible
 
