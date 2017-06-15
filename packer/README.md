@@ -27,5 +27,16 @@ Here, the “variables”. It is possible to do things like pass your AWS creden
 The “builders” section describes the environment we’re working with. In this case, it’s an AWS region, but it could be modified to use a vSphere environment as well. If we break down the code in the “builders” section, you’ll notice that we’ve provided access keys to login to our AWS account; we specified the AWS region, the source AMI, and we specified an ami_name which will be the final result.
 
 ![alt text](https://github.com/anmolnagpal/infrastructure-as-code-training/blob/master/images/img4.png)
+
+The last section is the “provisioners” where we’ll define what we want the virtual machine to do once it’s spun up. Here, we perform some operations on the base image such as perform a yum update, install Apache, and download some files from our S3 bucket.
+
+![alt text](https://github.com/anmolnagpal/infrastructure-as-code-training/blob/master/images/img5.png)
+
+The result is that we run our “Packer Build” command with this JSON file and it will spin up a new Linux AMI from the Amazon catalog, install tools, perform a apt-get update,  all before it powers off this VM and creates a new template called “ubunut-”
+
+We’ve got a pretty powerful tool here now that can be used to update our templates quickly across more than one platform.
+
+Template versioning can be a hassle, but Packer is an open source tool that can help you manage your environment more efficiently. Give Packer a try in your environment and see what sort of automation you can come up with for your templates. 
+
 ### Reference:
 - https://www.packer.io/docs/index.html
