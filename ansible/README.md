@@ -9,7 +9,7 @@ For more on Ansible, please reference Ansible's official docs.
 
 If you are a Python developer and have virtualenv installed, it's as simple as creating a virtualenv and then running pip install ansible inside it. Otherwise, refer to the official documentation.
 
-![alt text](images/img6.png)
+![alt text](../images/img6.png)
 
 
 # How do I run it?
