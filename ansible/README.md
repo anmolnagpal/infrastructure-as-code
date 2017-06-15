@@ -62,12 +62,12 @@ You're right, the above command is too much stuff for a simple ping. The stand-a
 
 There are only four fundamental concepts necessary for grokking Ansible; if you understand these, you're halfway there. To make it as simple as possible, here is a plain list:
 
-- Modules are units of action. For pretty much everything you would do on a server, there is a module. They can be built-in or add-ons. Examples are ping, copy/modify/delete file, install packages, start/stop/restart a service etc.
+* **Modules** are units of action. For pretty much everything you would do on a server, there is a module. They can be built-in or add-ons. Examples are ping, copy/modify/delete file, install packages, start/stop/restart a service etc.
 
-- Inventory is the specification of a set of servers and how to connect to them. Ansible provides very convenient ways to specify sets of servers, and aliases for these.
+* **Inventory** is the specification of a set of servers and how to connect to them. Ansible provides very convenient ways to specify sets of servers, and aliases for these.
 
-- Roles are collections of actions that serve a purpose, and data that belongs to these actions. Examples are installing, configuring and then starting a database server, or retrieving code, building it, moving it to servers and runing it.
+* **Roles** are collections of actions that serve a purpose, and data that belongs to these actions. Examples are installing, configuring and then starting a database server, or retrieving code, building it, moving it to servers and runing it.
 
-- Playbooks are collections of roles to run on a cluster of servers, completed with more data.
+* **Playbooks** are collections of roles to run on a cluster of servers, completed with more data.
 
-So in effect, roles are collections of module applications, and playbooks are specifications of which roles should be matched to which inventory. Module application means that a module is ran on a host with some arguments.
+So in effect, **roles are collections of module applications, and playbooks are specifications of which roles should be matched to which inventory.** Module application means that a module is ran on a host with some arguments.
