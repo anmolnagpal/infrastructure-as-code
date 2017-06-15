@@ -39,3 +39,35 @@ Now you should be able to SSH from anywhere on the host computer into the VM as 
 Last but not least here is what the contents of the inventory file should be:
 
 ``server ansible_ssh_port=2222 ansible_ssh_host=127.0.0.1```
+
+# Ping it
+
+Once you have your test server set up, run the following command to check whether Ansible can contact the server:
+
+``` ansible -i inventory server -m ping ```
+
+As a response, you should see the following, anything else means something went wrong:
+
+```
+server | success >> {
+    "changed": false,
+    "ping": "pong"
+}
+```
+
+
+You're right, the above command is too much stuff for a simple ping. The stand-alone ansible command is rarely used, though; it is mostly for the purpose of testing individual modules, or running emergency commands on a set of servers. The above ping command does the following: Use the inventory passed with the -i argument to run the module passed with the -m argument. The concept of modules will be explained in the next section. The ping module does not need any arguments, but if it did, it would have been possible to pass them with another switch. But as mentioned, we are interested in more complicated stuff and not a crappy replacement for ssh -c, so read on for plays, roles, and more.
+
+# Plays, Modules, etc
+
+There are only four fundamental concepts necessary for grokking Ansible; if you understand these, you're halfway there. To make it as simple as possible, here is a plain list:
+
+- Modules are units of action. For pretty much everything you would do on a server, there is a module. They can be built-in or add-ons. Examples are ping, copy/modify/delete file, install packages, start/stop/restart a service etc.
+
+- Inventory is the specification of a set of servers and how to connect to them. Ansible provides very convenient ways to specify sets of servers, and aliases for these.
+
+- Roles are collections of actions that serve a purpose, and data that belongs to these actions. Examples are installing, configuring and then starting a database server, or retrieving code, building it, moving it to servers and runing it.
+
+- Playbooks are collections of roles to run on a cluster of servers, completed with more data.
+
+So in effect, roles are collections of module applications, and playbooks are specifications of which roles should be matched to which inventory. Module application means that a module is ran on a host with some arguments.
