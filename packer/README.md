@@ -21,5 +21,11 @@ Let’s look at a quick example. The JSON file below shows 3 distinct sections: 
 
 ![alt text](https://github.com/anmolnagpal/infrastructure-as-code-training/blob/master/images/img3.png)
 
+
+Here, the “variables”. It is possible to do things like pass your AWS credentials in as a variable and that is a nice way to keep them out of the JSON file that you place in version control.
+
+The “builders” section describes the environment we’re working with. In this case, it’s an AWS region, but it could be modified to use a vSphere environment as well. If we break down the code in the “builders” section, you’ll notice that we’ve provided access keys to login to our AWS account; we specified the AWS region, the source AMI, and we specified an ami_name which will be the final result.
+
+![alt text](https://github.com/anmolnagpal/infrastructure-as-code-training/blob/master/images/img4.png)
 ### Reference:
 - https://www.packer.io/docs/index.html
