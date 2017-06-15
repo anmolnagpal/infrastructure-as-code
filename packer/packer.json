@@ -1,0 +1,53 @@
+{
+  "variables": {
+    "ami_name": "",
+    "aws_access_key": "",
+    "aws_secret_key": "",
+    "source_ami": "",
+    "description": "",
+    "region": "",
+    "subnet_id": "",
+    "vpc_id": ""
+  },
+  "builders": [
+    {
+      "type": "amazon-ebs",
+      "access_key": "{{user `aws_access_key`}}",
+      "secret_key": "{{user `aws_secret_key`}}",
+      "region": "{{user `region`}}",
+      "source_ami": "{{user `source_ami`}}",
+      "instance_type": "t2.medium",
+      "ssh_username": "ubuntu",
+      "ssh_timeout": "5m",
+      "subnet_id": "{{user `subnet_id`}}",
+      "vpc_id": "{{user `vpc_id`}}",
+      "associate_public_ip_address": true,
+      "ami_virtualization_type": "hvm",
+      "ami_description": "{{user `description`}}",
+      "ami_name": "{{user `description`}}",
+      "tags": {
+        "Name": "{{user `ami_name`}}"
+      }
+    }
+  ],
+  "provisioners": [
+    {
+      "type": "shell",
+      "start_retry_timeout": "10m",
+      "inline": [
+        "sudo apt-get install software-properties-common",
+        "sudo apt-get update",
+        "curl -sL https://deb.nodesource.com/setup_7.x | sudo -E bash -",
+        "sudo apt-get install -y nodejs",
+        "sudo timedatectl set-timezone UTC",
+        "sudo apt-get update",
+        "sudo apt-get -y upgrade",
+        "sudo apt-get -y install libssl-dev libcurl4-openssl-dev pkg-config libssl-dev libsslcommon2-dev ntp ",
+        "sudo apt-get -y install openssl git git-core golang goaccess htop rsyslog zip vim vim-common curl multitail python-pip",
+        "sudo apt-get -y install libpcre3 libpcre3-dev iotop iftop sysstat strace dstat figlet",
+        "sudo pip install awscli",
+        "sudo apt-get autoclean"
+      ]
+    }
+  ]
+}
