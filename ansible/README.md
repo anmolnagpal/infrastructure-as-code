@@ -39,7 +39,7 @@ Now you should be able to SSH from anywhere on the host computer into the VM as 
 
 Last but not least here is what the contents of the inventory file should be:
 
-``server ansible_ssh_port=2222 ansible_ssh_host=127.0.0.1```
+```server ansible_ssh_port=2222 ansible_ssh_host=127.0.0.1```
 
 # Ping it
 
