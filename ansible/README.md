@@ -73,3 +73,5 @@ There are only four fundamental concepts necessary for grokking Ansible; if you 
 * **Playbooks** are collections of roles to run on a cluster of servers, completed with more data.
 
 So in effect, **roles are collections of module applications, and playbooks are specifications of which roles should be matched to which inventory.** Module application means that a module is ran on a host with some arguments.
+
+![alt text](https://github.com/anmolnagpal/infrastructure-as-code-training/blob/master/images/img8.png)
