@@ -8,11 +8,15 @@ For more on Ansible, please reference Ansible's official docs.
 
 If you are a Python developer and have virtualenv installed, it's as simple as creating a virtualenv and then running pip install ansible inside it. Otherwise, refer to the official documentation.
 
+![alt text](https://github.com/anmolnagpal/infrastructure-as-code-training/blob/master/images/img6.png)
+
+
 # How do I run it?
 
 Ansible works over SSH, and does not require any special software installed on the remote server. Principally, you only need a Linux instance which you can acces over SSH. The prefered method of authentication is using private keys instead of passwords, due to security and ease of use. The collection of servers on which an Ansible playbook should run is specified in what is called the inventory. The inventory lists the names of the computers together with connection information such as SSH port and IP address. If you already have a server to which you can SSH as root on the default port, here is what you should put into a file named inventory:
 
-server ansible_ssh_host=IP_ADRESS
+```server ansible_ssh_host=IP_ADRESS```
+
 A sample inventory file is included in the example directory within this repo, within which we will be running the sample playbooks. You can go ahead and change it to suit your setup. Since we will be modifying the system quite a bit, you are recommended to use a server you can wipe and reinstall at will. The easiest way to do this is to use a VM, either locally or from a provider. Depending on which option you choose, the inventory file is going to be a bit different.
 
 # VM
@@ -34,4 +38,4 @@ Now you should be able to SSH from anywhere on the host computer into the VM as 
 
 Last but not least here is what the contents of the inventory file should be:
 
-```server ansible_ssh_port=2222 ansible_ssh_host=127.0.0.1```
+``server ansible_ssh_port=2222 ansible_ssh_host=127.0.0.1```
