@@ -7,7 +7,7 @@ Leveraging Packer allows you to build a new template based on an existing image,
 
 The basic process for using Packer includes taking an old template or Amazon machine image, applying new patches or software to it, and creating a new template or AMI from the results of those two actions. The original template is unharmed and a newly versioned template is created.
 
-<Image>
+![alt text](https://github.com/anmolnagpal/infrastructure-as-code-training/blob/master/images/img1.png)
 
 The result of using Packer across multiple environments means that through a single process, you can manage multiple templates to ensure consistency.
 
