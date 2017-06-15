@@ -15,6 +15,11 @@ The result of using Packer across multiple environments means that through a sin
 
 Simply managing templates may be a first step with Packer. Once you’ve matured this process, you can use Packer to build images on the fly and deploy the image with a tool like Terraform to build an immutable deployment infrastructure, which takes out all of the manual build steps that cause drift. Using Packer, you can be sure of a consistent deployment every time and if you need to build a new workload, you can create a new Packer build. Packer can be a great tool for use in blue-green deployment models, too. This deployment method can also be augmented with CI/CD tools like Jenkins to deploy templates, unit test capabilities, and then deployment into production.
 
+# Packer in Action
+
+Let’s look at a quick example. The JSON file below shows 3 distinct sections: variables, builders, and provisioners.
+
+![alt text](https://github.com/anmolnagpal/infrastructure-as-code-training/blob/master/images/img3.png)
 
 ### Reference:
 - https://www.packer.io/docs/index.html
