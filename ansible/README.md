@@ -1,3 +1,5 @@
-# Ansible
+# What is Ansible
 
+Ansible is an open source IT configuration management and automation tool. Similar to Puppet and Chef, Ansible has made a name for itself among system administrators that need to manage, automate, and orchestrate various types of server environments. Unlike Puppet and Chef, Ansible is agentless, and does not require a software agent to be installed on the target node (server or switch) in order to automate the device. By default, Ansible requires SSH and Python support on the target node, but Ansible can also be easily extended to use any API. In the Ansible modules developed for NX-OS as part of this project, Ansible modules make API calls against the NX-API to gather real-time state data and to make configuration changes on Cisco Nexus devices.
 
+For more on Ansible, please reference Ansible's official docs.
