@@ -9,7 +9,7 @@ For more on Ansible, please reference Ansible's official docs.
 
 If you are a Python developer and have virtualenv installed, it's as simple as creating a virtualenv and then running pip install ansible inside it. Otherwise, refer to the official documentation.
 
-![alt text](https://github.com/anmolnagpal/infrastructure-as-code-training/blob/master/images/img6.png)
+![alt text](images/img6.png)
 
 
 # How do I run it?
@@ -73,4 +73,4 @@ There are only four fundamental concepts necessary for grokking Ansible; if you 
 
 So in effect, **roles are collections of module applications, and playbooks are specifications of which roles should be matched to which inventory.** Module application means that a module is ran on a host with some arguments.
 
-![alt text](https://github.com/anmolnagpal/infrastructure-as-code-training/blob/master/images/img8.png)
+![alt text](images/img8.png)
