@@ -1,5 +1,6 @@
 # Infrastructure-as-code (IAC)
 
+
 A long time ago, in a data center far, far away, an ancient group of powerful beings known as sysadmins used to deploy infrastructure manually. Every server, every route table entry, every database configuration, and every load balancer was created and managed by hand. It was a dark and fearful age: fear of downtime, fear of accidental misconfiguration, fear of slow and fragile deployments, and fear of what would happen if the sysadmins fell to the dark side (i.e. took a vacation). The good news is that thanks to the DevOps Rebel Alliance, we now have a better way to do things: Infrastructure-as-Code (IAC).
 Instead of clicking around a web UI or SSHing to a server and manually executing commands, the idea behind IAC is to write code to define, provision, and manage your infrastructure. This has a number of benefits:
 
@@ -9,6 +10,9 @@ Instead of clicking around a web UI or SSHing to a server and manually executing
 - You can validate each infrastructure change through code reviews and automated tests.
 - You can create reusable, documented, battle-tested infrastructure packages that make it easier to scale and evolve your infrastructure.
 - There is one other very important, and often overlooked, reason for why you should use IAC: it makes developers happy. 
+
+
+![alt text](images/img1.png)
 
 Deploying code is a repetitive and tedious task. A computer can do that sort of thing quickly and reliably, but a human will be slow and error prone. Moreover, a developer will resent that type of work, as it involves no creativity, no challenge, and no recognition. You could deploy code perfectly for months, and no one will take notice — until that one day where you mess it up.That creates a stressful and unpleasant environment. IAC offers a better alternative that allows computers to do what they do best (automation) and developers to do what they do best (coding).
 
