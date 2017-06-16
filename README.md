@@ -12,7 +12,7 @@ Instead of clicking around a web UI or SSHing to a server and manually executing
 - There is one other very important, and often overlooked, reason for why you should use IAC: it makes developers happy. 
 
 
-![alt text](images/img1.png)
+![alt text](images/img9.png)
 
 Deploying code is a repetitive and tedious task. A computer can do that sort of thing quickly and reliably, but a human will be slow and error prone. Moreover, a developer will resent that type of work, as it involves no creativity, no challenge, and no recognition. You could deploy code perfectly for months, and no one will take notice — until that one day where you mess it up.That creates a stressful and unpleasant environment. IAC offers a better alternative that allows computers to do what they do best (automation) and developers to do what they do best (coding).
 
