@@ -33,3 +33,6 @@ An open source product from HashiCorp called “Packer” is a tool for managing
 ## [Terraform](./terraform/README.md)
 
 Terraform allows you to manage your AWS, and other cloud infrastructure, the same way you would manage servers using configuration management products like CFEngine or Puppet. Terraform is idempotent and convergent so only required changes are applied.
+
+
+![alt text](images/img10.png)
