@@ -135,5 +135,5 @@ resource "aws_instance" "tfdemo" {
 - Terraform show will show the current state.
 - Terraform destroy will destroy everything that is defined.
 
-* Note that there seems to be a built in order in which terraform runs that is not related to the order of the file. This is much like normal ordering in CFEngine. For example, when I run this code with nothing configured in AWS, it will try to build the server instance first, but fails because the groups and keys are not yet defined. But the groups and keys will be created next, so, run terraform a second time and it will converge, by creating just the instance while leaving the already existing groups and keys as they are.
+* **Note** that there seems to be a built in order in which terraform runs that is not related to the order of the file. This is much like normal ordering in CFEngine. For example, when I run this code with nothing configured in AWS, it will try to build the server instance first, but fails because the groups and keys are not yet defined. But the groups and keys will be created next, so, run terraform a second time and it will converge, by creating just the instance while leaving the already existing groups and keys as they are.
 
