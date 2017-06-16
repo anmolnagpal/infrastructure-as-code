@@ -1,4 +1,4 @@
-![alt text](https://github.com/anmolnagpal/infrastructure-as-code-training/blob/master/images/img7.png)
+![alt text](../images/img7.png)
 
 # What is Ansible
 
