@@ -40,3 +40,4 @@ Template versioning can be a hassle, but Packer is an open source tool that can 
 
 ### Reference:
 - https://www.packer.io/docs/index.html
+- https://github.com/awslabs/ami-builder-packer
