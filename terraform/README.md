@@ -130,10 +130,33 @@ resource "aws_instance" "tfdemo" {
 }
 ```
 
-- Terraform plan will report what must be done, but perform no changes.
-- Terraform apply will make the changes shown above.
-- Terraform show will show the current state.
-- Terraform destroy will destroy everything that is defined.
+## Usage
+```bash
+terraform [--version] [--help] <command> [args]
+```
+
+## Common commands:
+Command           | Description
+------------------|-------------------------------------------------------------
+apply             | Builds or changes infrastructure
+destroy           | Destroy Terraform-managed infrastructure
+fmt               | Rewrites config files to canonical format
+get               | Download and install modules for the configuration
+graph             | Create a visual graph of Terraform resources
+import            | Import existing infrastructure into Terraform
+init              | Initializes Terraform configuration from a module
+output            | Read an output from a state file
+plan              | Generate and show an execution plan
+push              | Upload this Terraform module to Atlas to run
+refresh           | Update local state file against real resources
+remote            | Configure remote state storage
+show              | Inspect Terraform state or plan
+taint             | Manually mark a resource for recreation
+untaint           | Manually unmark a resource as tainted
+validate          | Validates the Terraform files
+version           | Prints the Terraform version
+state             | Advanced state management
+
 
 * **Note** that there seems to be a built in order in which terraform runs that is not related to the order of the file. This is much like normal ordering in CFEngine. For example, when I run this code with nothing configured in AWS, it will try to build the server instance first, but fails because the groups and keys are not yet defined. But the groups and keys will be created next, so, run terraform a second time and it will converge, by creating just the instance while leaving the already existing groups and keys as they are.
 
